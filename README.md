@@ -11,7 +11,6 @@ A lightweight CRM application for managing companies, contacts, and deals.
 ## Prerequisites
 
 - Node.js
-- PostgreSQL database
 
 ## Setup
 
@@ -22,7 +21,7 @@ A lightweight CRM application for managing companies, contacts, and deals.
 
 2. Create a `.env` file in the `server/` directory:
    ```env
-   DATABASE_URL="postgresql://user:password@localhost:5432/crm"
+   DATABASE_URL="file:./dev.db"
    ```
 
 3. Run database migrations:
