@@ -28,6 +28,9 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
           primary: { main: '#1976d2' },
           secondary: { main: '#9c27b0' },
         },
+        typography: {
+          fontFamily: '"Source Sans 3", sans-serif',
+        },
       }),
     [mode]
   );
