@@ -30,6 +30,8 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
         },
         typography: {
           fontFamily: '"Source Sans 3", sans-serif',
+          h1: { fontWeight: 800 },
+          h2: { fontWeight: 700 },
         },
       }),
     [mode]
