@@ -5,9 +5,21 @@ export type DealStage = 'LEAD' | 'QUALIFIED' | 'PROPOSAL' | 'NEGOTIATION' | 'CLO
 export interface Deal {
   id: string;
   title: string;
+  organizationName?: string;
+  source?: string;
+  campaignTenderId?: string;
+  status?: string;
+  currency?: string;
   value?: number;
+  amountPerYear?: number;
+  users?: number;
+  model?: string;
   stage: DealStage;
+  nextStep?: string;
+  taskDueDate?: string;
   closeDate?: string;
+  lastActivity?: string;
+  driveFolderLink?: string;
   notes?: string;
   companyId?: string;
   contactId?: string;

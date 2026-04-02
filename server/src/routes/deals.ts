@@ -21,13 +21,30 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { title, value, stage, closeDate, notes, companyId, contactId } = req.body;
+  const {
+    title, organizationName, source, campaignTenderId, status, currency,
+    value, amountPerYear, users, model, stage, nextStep,
+    taskDueDate, closeDate, lastActivity, driveFolderLink, notes,
+    companyId, contactId,
+  } = req.body;
   const deal = await prisma.deal.create({
     data: {
       title,
+      organizationName: organizationName || null,
+      source: source || null,
+      campaignTenderId: campaignTenderId || null,
+      status: status || null,
+      currency: currency || null,
       value: value ? parseFloat(value) : null,
+      amountPerYear: amountPerYear ? parseFloat(amountPerYear) : null,
+      users: users ? parseInt(users) : null,
+      model: model || null,
       stage,
+      nextStep: nextStep || null,
+      taskDueDate: taskDueDate ? new Date(taskDueDate) : null,
       closeDate: closeDate ? new Date(closeDate) : null,
+      lastActivity: lastActivity ? new Date(lastActivity) : null,
+      driveFolderLink: driveFolderLink || null,
       notes,
       companyId,
       contactId,
@@ -38,14 +55,31 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  const { title, value, stage, closeDate, notes, companyId, contactId } = req.body;
+  const {
+    title, organizationName, source, campaignTenderId, status, currency,
+    value, amountPerYear, users, model, stage, nextStep,
+    taskDueDate, closeDate, lastActivity, driveFolderLink, notes,
+    companyId, contactId,
+  } = req.body;
   const deal = await prisma.deal.update({
     where: { id: req.params.id },
     data: {
       title,
+      organizationName: organizationName || null,
+      source: source || null,
+      campaignTenderId: campaignTenderId || null,
+      status: status || null,
+      currency: currency || null,
       value: value ? parseFloat(value) : null,
+      amountPerYear: amountPerYear ? parseFloat(amountPerYear) : null,
+      users: users ? parseInt(users) : null,
+      model: model || null,
       stage,
+      nextStep: nextStep || null,
+      taskDueDate: taskDueDate ? new Date(taskDueDate) : null,
       closeDate: closeDate ? new Date(closeDate) : null,
+      lastActivity: lastActivity ? new Date(lastActivity) : null,
+      driveFolderLink: driveFolderLink || null,
       notes,
       companyId,
       contactId,
