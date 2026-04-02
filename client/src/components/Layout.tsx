@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <Box sx={{ display: 'flex' }}>
       <AppBar position="fixed" sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
         <Toolbar>
-          <Typography variant="h6" noWrap sx={{ flexGrow: 1 }}>CRM</Typography>
+          <Typography variant="h6" component="span" noWrap sx={{ flexGrow: 1 }}>CRM</Typography>
           <Tooltip title={mode === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}>
             <IconButton color="inherit" onClick={toggleMode}>
               {mode === 'light' ? <Brightness4Icon /> : <Brightness7Icon />}

@@ -102,7 +102,7 @@ export default function DealsPage() {
   return (
     <Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-        <Typography variant="h5">Deals</Typography>
+        <Typography variant="h5" component="h1">Deals</Typography>
         <Button variant="contained" startIcon={<AddIcon />} onClick={openNew}>Add Deal</Button>
       </Box>
       <TableContainer component={Paper}>

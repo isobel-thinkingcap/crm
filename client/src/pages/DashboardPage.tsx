@@ -33,7 +33,7 @@ export default function DashboardPage() {
 
   return (
     <Box>
-      <Typography variant="h5" gutterBottom>Dashboard</Typography>
+      <Typography variant="h5" component="h1" gutterBottom>Dashboard</Typography>
       <Grid container spacing={3}>
         {stats.map(s => (
           <Grid item xs={12} sm={6} md={3} key={s.label}>
@@ -41,7 +41,7 @@ export default function DashboardPage() {
               <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                 {s.icon}
                 <Box>
-                  <Typography variant="h4">{s.value}</Typography>
+                  <Typography variant="h4" component="p">{s.value}</Typography>
                   <Typography color="text.secondary">{s.label}</Typography>
                 </Box>
               </CardContent>

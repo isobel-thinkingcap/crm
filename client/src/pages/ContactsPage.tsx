@@ -47,7 +47,7 @@ export default function ContactsPage() {
   return (
     <Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-        <Typography variant="h5">Contacts</Typography>
+        <Typography variant="h5" component="h1">Contacts</Typography>
         <Button variant="contained" startIcon={<AddIcon />} onClick={openNew}>Add Contact</Button>
       </Box>
       <TableContainer component={Paper}>

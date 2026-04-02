@@ -41,7 +41,7 @@ export default function CompaniesPage() {
   return (
     <Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
-        <Typography variant="h5">Companies</Typography>
+        <Typography variant="h5" component="h1">Companies</Typography>
         <Button variant="contained" startIcon={<AddIcon />} onClick={openNew}>Add Company</Button>
       </Box>
       <TableContainer component={Paper}>
